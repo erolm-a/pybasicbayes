@@ -1,0 +1,39 @@
+[build-system]
+requires = [
+  "setuptools>=61",
+  "wheel",
+  "numpy",
+  "cython",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pybasicbayes"
+version = "0.2.2"
+description = "Basic utilities for Bayesian inference"
+authors = [
+  { name = "Matthew James Johnson", email = "matthjj@csail.mit.edu" }
+]
+dependencies = [
+  "numpy",
+  "scipy",
+  "cython",
+  "matplotlib",
+  "nose",
+  "future"
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "http://github.com/mattjj/pybasicbayes"
+
+[tool.setuptools]
+packages = [
+        "pybasicbayes",
+        "pybasicbayes.distributions",
+        "pybasicbayes.util",
+        "pybasicbayes.testing",
+        "pybasicbayes.models"
+    ]
+
+include-package-data = true
